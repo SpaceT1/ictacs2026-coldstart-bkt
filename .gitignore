@@ -1,0 +1,9 @@
+data/
+results/e1_cache/
+results/exp2.pkl
+results/exp2_cache/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
