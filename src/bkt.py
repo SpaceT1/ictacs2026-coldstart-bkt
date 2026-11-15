@@ -34,15 +34,25 @@ def predict(X, M, p, return_L=False):
     return (P, LL) if return_L else P
 
 
-def em_fit(X, M, n_restarts=5, n_iter=100, tol=1e-5, seed=0, max_gs=0.5):
+def em_fit(X, M, n_restarts=5, n_iter=100, tol=1e-5, seed=0, max_gs=0.5, fixed=None):
+    """Baum-Welch (EM) for the 4-parameter BKT model.
+    Initialisation: prior~U(.05,.6), learn~U(.05,.4), guess~U(.05,.35), slip~U(.05,.25);
+    best of `n_restarts` restarts by log-likelihood; a restart stops when the
+    log-likelihood improves by less than `tol` or after `n_iter` iterations.
+    All parameters are clipped to [1e-4, 0.999]; guess and slip to at most `max_gs`.
+    Sequences of different length are padded and masked (padding has no likelihood).
+    `fixed` (optional dict) holds parameters that are kept constant, e.g. {'prior': 0.1}."""
     rng = np.random.default_rng(seed)
+    fixed = fixed or {}
     best, best_ll = None, -np.inf
     for r in range(n_restarts):
         p = dict(prior=rng.uniform(0.05, 0.6), learn=rng.uniform(0.05, 0.4),
                  guess=rng.uniform(0.05, 0.35), slip=rng.uniform(0.05, 0.25))
+        p.update(fixed)
         prev = -np.inf
         for it in range(n_iter):
             p, ll = _em_step(X, M, p, max_gs)
+            p.update(fixed)
             if ll - prev < tol:
                 break
             prev = ll
@@ -87,6 +97,11 @@ def _em_step(X, M, p, max_gs):
     clip = lambda v, hi=0.999: float(np.clip(v, 1e-4, hi))
     return dict(prior=clip(prior), learn=clip(learn), guess=clip(guess, max_gs),
                 slip=clip(slip, max_gs)), ll
+
+
+def loglik(X, M, p):
+    """Log-likelihood of the data under p (scaled forward algorithm)."""
+    return _em_step(X, M, p, 0.5)[1]
 
 
 def simulate(n, T, p, rng):

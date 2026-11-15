@@ -1,0 +1,146 @@
+{
+ "robust": {
+  "n_cells": 39,
+  "level_gt_flat": 36,
+  "level_gt_ktidem_tuned": 37,
+  "level_minus_flat_range": [
+   -0.08549999999999999,
+   0.2465
+  ],
+  "level_minus_kt_range": [
+   -0.017999999999999988,
+   0.17349999999999993
+  ],
+  "level_vs_fixed_tuned_mastery_range": [
+   -0.1445,
+   0.1845
+  ],
+  "level_gt_fixed_tuned_mastery": 18,
+  "level_gt_fixed_tuned_all4": 38,
+  "precision_level_range": [
+   0.11537352177675224,
+   0.5326791334937975
+  ],
+  "precision_flat_max": 0.043514926631809746,
+  "precision_kt_max": 0.1462761207358457
+ },
+ "by_cond": {
+  "base": {
+   "level_minus_flat": 0.18116666666666667,
+   "level_minus_kt": 0.11616666666666665,
+   "level_minus_fixed_tuned": -0.021500000000000057,
+   "all4_level_minus_fixed_tuned": 0.12,
+   "prec_level": 0.33029612756264237,
+   "prec_flat": 0.018556350017024173,
+   "prec_kt": 0.06239364719228588
+  },
+  "guess g=0.10": {
+   "level_minus_flat": 0.20766666666666667,
+   "level_minus_kt": 0.1435,
+   "level_minus_fixed_tuned": -0.02683333333333336,
+   "all4_level_minus_fixed_tuned": 0.14066666666666663,
+   "prec_level": 0.30449678800856533,
+   "prec_flat": 0.015080603224128965,
+   "prec_kt": 0.060733613950691524
+  },
+  "guess g=0.30": {
+   "level_minus_flat": 0.165,
+   "level_minus_kt": 0.10533333333333333,
+   "level_minus_fixed_tuned": -0.004500000000000004,
+   "all4_level_minus_fixed_tuned": 0.1133333333333333,
+   "prec_level": 0.35423695177614606,
+   "prec_flat": 0.02079838980207984,
+   "prec_kt": 0.06469100108420672
+  },
+  "spacing b=+-1.0": {
+   "level_minus_flat": 0.08266666666666667,
+   "level_minus_kt": 0.05083333333333336,
+   "level_minus_fixed_tuned": 0.03100000000000001,
+   "all4_level_minus_fixed_tuned": 0.1553333333333333,
+   "prec_level": 0.44400826446280994,
+   "prec_flat": 0.04115082824760244,
+   "prec_kt": 0.11138947774137599
+  },
+  "spacing b=+-2.0": {
+   "level_minus_flat": 0.17366666666666664,
+   "level_minus_kt": 0.145,
+   "level_minus_fixed_tuned": -0.10366666666666664,
+   "all4_level_minus_fixed_tuned": 0.08333333333333333,
+   "prec_level": 0.26195121951219513,
+   "prec_flat": 0.008903074080295649,
+   "prec_kt": 0.03801751592356688
+  },
+  "learning rate x0.6": {
+   "level_minus_flat": 0.06666666666666668,
+   "level_minus_kt": 0.06266666666666668,
+   "level_minus_fixed_tuned": -0.10416666666666664,
+   "all4_level_minus_fixed_tuned": 0.037333333333333336,
+   "prec_level": 0.11537352177675224,
+   "prec_flat": 0.006055363321799308,
+   "prec_kt": 0.01900715563506261
+  },
+  "learning rate x1.4": {
+   "level_minus_flat": 0.16966666666666663,
+   "level_minus_kt": 0.08600000000000001,
+   "level_minus_fixed_tuned": 0.04700000000000001,
+   "all4_level_minus_fixed_tuned": 0.17600000000000002,
+   "prec_level": 0.5326791334937975,
+   "prec_flat": 0.043514926631809746,
+   "prec_kt": 0.1462761207358457
+  },
+  "forgetting 0.5%/task": {
+   "level_minus_flat": 0.146,
+   "level_minus_kt": 0.12416666666666665,
+   "level_minus_fixed_tuned": -0.09399999999999997,
+   "all4_level_minus_fixed_tuned": 0.06599999999999999,
+   "prec_level": 0.2574368150301946,
+   "prec_flat": 0.018439474133515453,
+   "prec_kt": 0.05414949970570924
+  },
+  "forgetting 2%/task": {
+   "level_minus_flat": 0.039333333333333324,
+   "level_minus_kt": 0.04416666666666666,
+   "level_minus_fixed_tuned": -0.06083333333333333,
+   "all4_level_minus_fixed_tuned": 0.010000000000000002,
+   "prec_level": 0.1673957421988918,
+   "prec_flat": 0.015821152192605333,
+   "prec_kt": 0.03781420765027323
+  },
+  "success-driven growth": {
+   "level_minus_flat": 0.19099999999999998,
+   "level_minus_kt": 0.08616666666666666,
+   "level_minus_fixed_tuned": 0.03883333333333331,
+   "all4_level_minus_fixed_tuned": 0.19533333333333333,
+   "prec_level": 0.46956880544666807,
+   "prec_flat": 0.02982516283853274,
+   "prec_kt": 0.10735963581183612
+  },
+  "error-driven growth": {
+   "level_minus_flat": 0.1365,
+   "level_minus_kt": 0.12200000000000004,
+   "level_minus_fixed_tuned": -0.08483333333333332,
+   "all4_level_minus_fixed_tuned": 0.04733333333333332,
+   "prec_level": 0.21734498188791818,
+   "prec_flat": 0.013728813559322034,
+   "prec_kt": 0.04889833784306146
+  },
+  "budget 50": {
+   "level_minus_flat": -0.03716666666666666,
+   "level_minus_kt": -0.006499999999999996,
+   "level_minus_fixed_tuned": 0.09566666666666668,
+   "all4_level_minus_fixed_tuned": 0.019333333333333334,
+   "prec_level": 0.3813813813813814,
+   "prec_flat": 0.022004437869822487,
+   "prec_kt": 0.06135815236125474
+  },
+  "budget 150": {
+   "level_minus_flat": 0.14933333333333332,
+   "level_minus_kt": 0.05416666666666662,
+   "level_minus_fixed_tuned": 0.09216666666666662,
+   "all4_level_minus_fixed_tuned": 0.24133333333333332,
+   "prec_level": 0.31002162941600575,
+   "prec_flat": 0.019785378940308518,
+   "prec_kt": 0.06174777603349032
+  }
+ }
+}
